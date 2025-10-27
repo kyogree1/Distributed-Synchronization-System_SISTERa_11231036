@@ -1,9 +1,3 @@
-Perfect 🔥
-Berikut ini versi lengkap `README.md` (bisa langsung kamu salin ke repo GitHub).
-Strukturnya mengikuti standar dokumentasi proyek profesional: ada deskripsi, arsitektur, setup, cara menjalankan, dan semua **testing per langkah (locks, queue, cache)**.
-
----
-
 # 🧩 Distributed Synchronization System
 
 **Mata Kuliah:** Sistem Paralel dan Terdistribusi
