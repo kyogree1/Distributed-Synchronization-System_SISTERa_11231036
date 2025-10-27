@@ -1,0 +1,35 @@
+openapi: 3.0.3
+info: { title: Distributed Sync System API, version: 1.0.0 }
+paths:
+  /locks/acquire:
+    post:
+      summary: Acquire lock
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resource: { type: string }
+                client_id: { type: string }
+                mode: { type: string, enum: [shared, exclusive] }
+  /locks/release:
+    post:
+      summary: Release lock
+  /locks/state:
+    get: { summary: Lock state }
+  /queue/publish:
+    post: { summary: Publish message }
+  /queue/consume:
+    post: { summary: Consume with visibility timeout }
+  /queue/ack:
+    post: { summary: Ack message }
+  /queue/requeue_expired:
+    post: { summary: Requeue expired messages }
+  /cache/get:
+    get: { summary: Get key (MESI) }
+  /cache/set:
+    post: { summary: Set key (MESI, invalidate peers) }
+  /cache/invalidate:
+    post: { summary: Invalidate key on this node }
